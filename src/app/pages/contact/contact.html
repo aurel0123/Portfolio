@@ -1,0 +1,61 @@
+<section id="contact" class=" bg-shades-90 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="content max-w-6xl mx-auto text-center">
+        <div class="details mb-12 px-2">
+            <h1 class="text-3xl lg:text-4xl font-bold text-white leading-tight">
+                {{ t('contact.title') }}
+            </h1>
+            <p class="text-gray-300 text-base sm:text-lg mt-4">
+                {{ t('contact.subtitle') }}
+            </p>
+        </div>
+
+        <div class="flex justify-center w-full">
+            <form class="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-6 px-2">
+                <!-- Left Column -->
+                <div class="flex flex-col gap-4 w-full">
+                    <input 
+                        type="text" 
+                        placeholder=" {{ t('contact.form.name') }} " 
+                        class="input-field w-full p-3 rounded-lg bg-shades-60 text-white border border-gray-600 focus:border-blue-500 focus:outline-none"
+                    />
+                    <input 
+                        type="text" 
+                        placeholder="+123 456 7890" 
+                        class="input-field w-full p-3 rounded-lg bg-shades-60 text-white border border-gray-600 focus:border-blue-500 focus:outline-none"
+                    />
+                    <input 
+                        type="text" 
+                        placeholder="e.g. 2-3 weeks" 
+                        class="input-field w-full p-3 rounded-lg bg-shades-60 text-white border border-gray-600 focus:border-blue-500 focus:outline-none"
+                    />
+                </div>
+
+                <!-- Right Column -->
+                <div class="flex flex-col gap-4 w-full">
+                    <input 
+                        type="email" 
+                        placeholder=" {{ t('contact.form.email') }} " 
+                        class="input-field w-full p-3 rounded-lg bg-shades-60 text-white border border-gray-600 focus:border-blue-500 focus:outline-none"
+                    />
+                    <input 
+                        type="text" 
+                        placeholder="Web Design, SEO, etc." 
+                        class="input-field w-full p-3 rounded-lg bg-shades-60 text-white border border-gray-600 focus:border-blue-500 focus:outline-none"
+                    />
+                    <textarea 
+                        rows="4" 
+                        placeholder="Tell us more about your project..." 
+                        class="input-field w-full p-3 rounded-lg bg-shades-60 text-white border border-gray-600 focus:border-blue-500 focus:outline-none"
+                    ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-span-1 lg:col-span-2 flex justify-end mt-2">
+                    <button type="submit" class="bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-shades-40 hover:scale-105 transition-transform duration-300 w-full sm:w-auto">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

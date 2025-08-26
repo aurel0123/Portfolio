@@ -1,0 +1,41 @@
+<section id="about" class="container-about">
+    <div class="content p-8 lg:p-4 text-center mt-20 lg:mt-0">
+        <div class="text-section">
+            <h2 class="leading-8 text-2xl lg:text-4xl">{{ t('about.title')  }}</h2>
+        </div>
+        <div class="flex flex-col-reverse items-center mt-20 lg:flex-row ">
+            <div class="text-justify lg:max-w-2xl font-preahvihear text-gray-300 flex flex-col gap-4">
+                <div class="mb-6">
+                    <p>
+                    {{ t('about.text1')  }}
+                    </p>
+                    <p class="mt-4">
+                        {{ t('about.text2')  }}
+                    </p>
+                </div>
+                <a href="https://cvdesignr.com/p/67e8ebb0f0f7f?hl=fr_FR" class="btn-cv w-fit">
+                    {{ t('about.cta')  }}
+                </a>
+            </div>
+            <div class="relative flex items-center justify-center w-full gap-8 lg:w-1/2 mb-10 lg:mb-0">
+                <div class="flex items-center justify-center">
+                    <img 
+                        src="assets/images/rectangle.png" 
+                        alt="rectangle" 
+                        width="350" 
+                        height="350"
+                    />  
+                    <div class="absolute animate-float ">
+                        <img
+                            src="assets/images/Profile.png"
+                            alt="Photo"
+                            width="400"
+                            height="400"
+                            class="hover:scale-105 transition-transform duration-300 ease-out"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

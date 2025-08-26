@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+@import '@fontsource/poppins/800.css';
+@import '@fontsource/poppins/900.css';
+@import '@fontsource/preahvihear';
+
+@theme {
+    --color-primary: #7127BA;
+    --color-secondary: #5A1F95;
+    --color-shades-20 : #5A1F95 ;
+    --color-shades-40 : #441770 ; 
+    --color-shades-60 : #2D104A ;
+    --color-shades-80 : #170825 ;
+    --color-shades-90 : #0B0413 ;
+    --color-shades-95 : #060209 ;
+    --color-tints-20 : #8D52C8 ;
+    --color-tints-40 : #AA7DD6 ;
+    --color-tints-60 : #C6A9E3 ;
+    --color-tints-80 : #E3D4F1 ;
+    --color-tints-90 : #F1E9F8 ;
+    --color-tints-95 : #F8F4FC ;
+    
+    --font-poppins: 'Poppins', sans-serif;
+    
+    --font-preahvihear: 'Preahvihear', sans-serif;
+}
+
+body{
+    font-family: var(--font-poppins);
+    background-color: var(--color-shades-90);
+    color: white;
+}
+@layer components {
+    .container {
+        @apply max-w-5xl mx-auto min-h-screen ; 
+    }
+    .content {
+        @apply flex flex-col;
+    }
+}

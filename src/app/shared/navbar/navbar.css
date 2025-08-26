@@ -1,0 +1,122 @@
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: var(--color-shades-20);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 8px;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  /*color: #3b82f6;*/
+}
+
+/* Effet de clic/active */
+.nav-link:active {
+  transform: translateY(0px) scale(0.95);
+  transition: all 0.1s ease;
+}
+
+.active-link {
+  color: white;
+  font-weight: 600;
+}
+
+.active-link::before {
+  width: 100%;
+}
+
+/* Animation au chargement */
+.nav-item {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideIn 0.5s ease forwards;
+}
+
+.nav-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.nav-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.nav-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.nav-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-container {
+  transition: all 0.3s ease;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.box-image{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.language-toggle-btn {
+  min-width: 80px;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.language-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.95);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.language-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.language-option {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.language-option:hover {
+  background-color: var(--color-shades-40);
+}
+
+.flag-icon {
+  font-size: 1.2em;
+  line-height: 1;
+}

@@ -1,0 +1,35 @@
+import { Component } from '@angular/core';
+import { LanguageCode, TranslationKey, TRANSLATIONS } from '../../shared/translations';
+
+@Component({
+  selector: 'app-project',
+  imports: [],
+  templateUrl: './project.html',
+  styleUrl: './project.css',
+})
+export class Project {
+  translations = TRANSLATIONS;
+
+  // Sécurise la valeur lue du localStorage
+  currentLang: LanguageCode = (() => {
+    const saved = localStorage.getItem('selectedLanguage');
+    return saved === 'fr' || saved === 'en' ? saved : 'en';
+  })();
+
+  private onLangChanged = (e: Event) => {
+    const { language } = (e as CustomEvent<{ language: LanguageCode }>).detail;
+    this.currentLang = language;
+  };
+
+  ngOnInit(): void {
+    window.addEventListener('languageChanged', this.onLangChanged as EventListener);
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('languageChanged', this.onLangChanged as EventListener);
+  }
+
+  t(key: TranslationKey): string {
+    return this.translations[this.currentLang][key] ?? key;
+  }
+}

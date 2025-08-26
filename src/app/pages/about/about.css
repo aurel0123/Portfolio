@@ -1,0 +1,19 @@
+.container-about {
+    max-width: 1200px ;
+    margin: 80px auto ;
+    min-height: 100vh ;
+}
+.text-section {
+    font-family: var(--font-preahvihear);
+}
+.btn-cv {
+    padding: 10px 20px ;
+    background-color: var(--color-primary) ;
+    color: white ;
+    border-radius: 5px ;
+    text-decoration: none ;
+    transition: background-color 0.3s ease ;
+}
+.btn-cv:hover {
+    background-color: var(--color-secondary) ;
+}

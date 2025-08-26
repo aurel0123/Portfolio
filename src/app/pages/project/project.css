@@ -1,0 +1,10 @@
+.container-peoject{
+    min-height: 100vh;
+    margin: 40px auto ;
+    max-width: 1200px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}

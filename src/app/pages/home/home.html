@@ -1,0 +1,82 @@
+<section class="container flex flex-col lg:flex-row items-center justify-center w-full">
+    <div class="flex flex-col lg:flex-row items-center justify-center w-full px-6 lg:px-0 mt-40 lg:mt-20">
+        <!-- Image Profile avec animations -->
+        <div class="relative flex items-center justify-center animate-fade-in-up">
+            <div class="flex items-center justify-center">
+                <!-- Ellipse avec rotation lente -->
+                <img
+                    ngSrc="assets/images/Ellipse.png"
+                    width="300"
+                    height="300"
+                    class="animate-spin-slow"
+                />
+                <!-- Profile avec effet de flottement -->
+                <div class="absolute animate-float">
+                    <img
+                        ngSrc="assets/images/Profile.png"
+                        alt="Photo"
+                        width="300"
+                        height="300"
+                        class="hover:scale-105 transition-transform duration-300 ease-out"
+                    />
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contenu texte avec animations -->
+        <div class="relative w-full lg:w-[580px] h-[300px] lg:h-[500px] mt-10 lg:mt-0 lg:ml-14 flex flex-col items-center justify-center p-2 animate-fade-in-right">
+            <!-- Flèche avec animation de rebond -->
+            <div>
+                <div class="absolute top-20 -left-30 hidden lg:block animate-bounce-subtle">
+                    <img ngSrc="assets/images/arrow.png" alt="" width="120" height="80" class="animate-pulse-gentle">
+                </div>
+                <div class="absolute top-16 left-2 hidden lg:block animate-slide-in-left">
+                    <h4 class="font-preahvihear text-2xl leading-8 hover:text-blue-300 transition-colors duration-300" [innerHTML]="t('home.title')"></h4>
+                </div>
+            </div>
+            
+            <!-- Contenu principal avec animations échelonnées -->
+            <div class="flex flex-col items-items justify-center mt-20">
+                <div class="details font-preahvihear">
+                    <!-- Subtitle avec délai -->
+                    <h4 class="text-lg leading-8 animate-fade-in-up animation-delay-200 hover:scale-102 transition-transform duration-300">
+                        {{ t('home.subtitle') }}
+                    </h4>
+                    
+                    <!-- Vision avec délai plus long -->
+                    <h1 class="text-4xl leading-14 vision animate-fade-in-up animation-delay-400 hover:text-gradient-animate transition-all duration-500"
+                        [innerHTML]="t('home.vision')">
+                    </h1>
+                    
+                    <!-- Description avec délai encore plus long -->
+                    <p class="text-sm leading-6 text-gray-200 animate-fade-in-up animation-delay-600 hover:text-gray-100 transition-colors duration-300">
+                        {{ t('home.description') }}
+                    </p>
+                </div>
+                
+                <!-- Boutons avec animations et effets hover -->
+                <div class="Buttons animate-fade-in-up animation-delay-800">
+                    <app-button 
+                        variant="primary" 
+                        size="lg" 
+                        class="hover:scale-105 hover:shadow-lg transition-all duration-300 ease-out hover:-translate-y-1"
+                    >
+                        {{ t('home.cta2') }}
+                    </app-button>
+                    <app-button 
+                        variant="ghost" 
+                        size="lg" 
+                        class="ml-4 hover:scale-105 hover:bg-white/10 transition-all duration-300 ease-out hover:-translate-y-1 hover:backdrop-blur-sm"
+                    >
+                        {{ t('home.cta') }}
+                    </app-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-services></app-services>
+<app-about></app-about>
+<app-skill></app-skill>
+<app-project></app-project>
+<app-contact></app-contact>
